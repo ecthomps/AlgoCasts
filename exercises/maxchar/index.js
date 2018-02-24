@@ -7,16 +7,16 @@
 
 function maxChar(str) {
 
-    const charMap = {};
-    let max = 0;
-    let maxChar = '';
+    maxChar = "";
+    max = 0;
+    charObj = {};
 
     for(let char of str)
-        charMap[char] = charMap[char] + 1 || 1;
+        charObj[char] = charObj[char] + 1 || 1;
 
-    for (let char in charMap){
-        if(charMap[char] > max){
-            max = charMap[char];
+    for(let char in charObj){
+        if(max < charObj[char]){
+            max = charObj[char];
             maxChar = char;
         }
     }
