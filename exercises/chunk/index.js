@@ -13,6 +13,27 @@ function chunk(array, size) {
     //create a new array
     const chunked = [];
 
+    let index = 0;
+
+    while(index < array.length){
+        chunked.push(array.slice(index, index + size));
+
+        index += size;
+    }
+
+    return chunked;
+}
+
+module.exports = chunk;
+
+
+// Solution 1
+
+/**
+ * 
+ * //create a new array
+    const chunked = [];
+
     //iterate through the existing array
     for (let elem of array){
     
@@ -29,7 +50,6 @@ function chunk(array, size) {
         }
     }
 
-    return chunked;
-}
-
-module.exports = chunk;
+    return chunked;* 
+ * 
+ */
