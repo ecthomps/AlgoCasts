@@ -8,9 +8,7 @@
 
 function reverse(str) {
     //debugger;
-    return str.split('').reduce((rev, char) =>
-        char + rev
-    , '')
+    return str.split('').reduce((rev, char) =>char + rev, '')
 }
 
 //reverse('asdf');
@@ -26,7 +24,6 @@ module.exports = reverse;
 //Solution 2
 // function reverse(str) {
 //     let reversed = "";
-
 //     for (let char of str)
 //         reversed = char + reversed;    
 //     return reversed;
